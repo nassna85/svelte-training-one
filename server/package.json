@@ -1,0 +1,20 @@
+{
+  "name": "svelte_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "server": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "Naïm Elmaftouhi",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "prettier": "^2.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
