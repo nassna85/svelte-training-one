@@ -1,7 +1,11 @@
 # SERVER
 /server/node_modules
-.idea
 /server/.env
 
 #CLIENT
 /client/node_modules
+/client/public/build
+
+#IDE
+.idea
+.DS_Store
