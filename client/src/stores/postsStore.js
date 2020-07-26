@@ -7,9 +7,10 @@ const customPostStore = {
   setPosts: (items) => {
     posts.set(items);
   },
-  getPost: (id) => {
-    console.log(id);
-    return posts.filter((item) => item.id === id);
+  addPost: (post) => {
+    posts.update((items) => {
+      return items.concat(post);
+    });
   },
 };
 

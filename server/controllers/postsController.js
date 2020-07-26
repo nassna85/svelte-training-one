@@ -13,6 +13,20 @@ const getAllPosts = async (req, res) => {
   }
 };
 
+const getPost = async (req, res) => {
+  const id = req.params.id;
+  console.log({ id });
+  try {
+    const post = await axios.get(process.env.API_URL_PLACEHOLDER + "/" + id);
+    if (!post) return res.status(404).json({ msg: "Post Not Found" });
+    return res.status(200).json(post.data);
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({ msg: "Error Server" });
+  }
+};
+
 module.exports = {
   getAllPosts,
+  getPost,
 };
