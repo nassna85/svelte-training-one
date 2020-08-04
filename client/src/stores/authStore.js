@@ -7,7 +7,8 @@ const customAuthStore = {
   subscribe: isAuthenticated.subscribe,
   toggleAuth: (value) => {
     const token = window.localStorage.getItem("authToken");
-    if (value === true && token) {
+    // Change !token => token
+    if (value === true && !token) {
       isAuthenticated.update((storeValue) => {
         return (storeValue = value);
       });
